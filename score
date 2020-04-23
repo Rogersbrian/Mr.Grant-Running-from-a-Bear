@@ -1,0 +1,8 @@
+public class score {
+  
+  public static int score;
+  
+ public static addTo (int a){
+  score += a;
+  }
+  }

@@ -18,4 +18,15 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
     }
+    
+    public void started() {
+    addObject(new Mountain(), 599, 250);
+    addObject(new Bush(), 599, 250);
+    addObject(new RoadBack(), 599, 270);
+    addObject(new road(), 599, 280);
+    addObject(new RoadFront(), 599, 280);
+    
+    
+    
+    }
 }

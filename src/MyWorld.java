@@ -25,6 +25,15 @@ public class MyWorld extends World
     addObject(new RoadBack(), 599, 270);
     addObject(new road(), 599, 280);
     addObject(new RoadFront(), 599, 280);
+    addObject(new Jumper(), 250, 330);
+    addObject(new Bear(), 100, 350);
+    addObject(new HealthBar(), 500, 50);
+    addObject(new Heart(), 455, 50);
+    addObject(new Heart2(), 478, 50);
+    addObject(new Heart3(), 501, 50);
+    addObject(new Heart4(), 524, 50);
+    addObject(new Heart5(), 547, 50);
+    addObject(new Timer(), 200, 50);
     
     
     

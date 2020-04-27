@@ -43,7 +43,10 @@ public class MyWorld extends World
     addObject(new Heart4(), 524, 50);
     addObject(new Heart5(), 547, 50);
     addObject(new Timer(), 200, 50);
-    
+    addObject(new Cactus(), 600, 300);
+    addObject(new Bird(), 600, 100);
+    addObject(new Soda(), 600, 350);
+    addObject(new Tumbleweed(), 600, 350);
     
 }
     }

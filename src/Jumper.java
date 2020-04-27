@@ -14,6 +14,8 @@ public class Jumper extends Actor
      */
     private final int GRAVITY=1;
     private int velocity;
+    private static boolean key = false;
+    private int keyTime = 251;
     public Jumper(){
         velocity=0;
     }
@@ -38,11 +40,23 @@ public class Jumper extends Actor
     {
         int y=getY();
         int x=getX();
-        if(Greenfoot.isKeyDown("f"))//move left
-        x--;
-        if(Greenfoot.isKeyDown("j"))//move right
+   
+        if(Greenfoot.isKeyDown("f")){//move
+        key = true;
+        keyTime = 0;
+    }
+    if (key == true){
+    for (keyTime = 0; keyTime < 250; keyTime++)
+        {
+        if (Greenfoot.isKeyDown("j"))
+        {
         x++;
-        if(Greenfoot.isKeyDown("space"))//jump
+        key = false;
+        keyTime = 251;
+    }
+    }
+}
+        if (Greenfoot.isKeyDown("space"))//jump
         {
         y--;
     }

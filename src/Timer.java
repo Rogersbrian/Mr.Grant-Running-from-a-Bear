@@ -36,6 +36,7 @@ public class Timer extends Actor
         second=TimeElapsed/50;
         if(minute>59)
     {
+    Greenfoot.stop();
     return "Great job! You won the game!";
 }
         if(second>60)

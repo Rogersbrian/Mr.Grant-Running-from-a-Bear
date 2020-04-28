@@ -14,9 +14,14 @@ public class Scorpion extends Actor
      */
     public void act() 
     {
-         int y=getY();
+       int y=getY();
         int x=getX();
-       x-=.05;
+        x-=.05;
         setLocation(x,y);
+        double amplitude = 1.3;
+        double frequency = 3.0;
+        x--;
+        setLocation(x, getY()+(int)(Math.sin((double)(getX()+1)*frequency/95.5)*amplitude));
+    }    
     }    
 }

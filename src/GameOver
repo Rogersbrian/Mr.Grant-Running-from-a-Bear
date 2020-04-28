@@ -1,0 +1,26 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class GameOver here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class GameOver extends MyWorld
+{
+
+    /**
+     * Constructor for objects of class GameOver.
+     * 
+     */
+    public GameOver()
+    {
+    removeObjects(getObjects(Actor.class)); // remove all actors from world
+    GreenfootImage imageFinal = getBackground(); // get reference to background image
+    imageFinal.setColor(Color.BLACK); // set drawing color to black for 'imageFinal' image
+    imageFinal.fill(); // fills 'imageFinal' image with the currently set drawing color
+    GreenfootImage textFinal = new GreenfootImage("GAME\nOVER", 80, Color.WHITE, Color.BLACK); // create "GAME OVER" text image
+    imageFinal.drawImage(textFinal, (imageFinal.getWidth()-textFinal.getWidth())/2, (imageFinal.getHeight()-textFinal.getHeight())/2); // draw text centered onto 'imageFinal' image
+    Greenfoot.stop(); // stop the scenario
+    }
+}

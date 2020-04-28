@@ -47,7 +47,8 @@ public class MyWorld extends World
     addObject(new Bird(), 600, 100);
     addObject(new Soda(), 600, 350);
     addObject(new Tumbleweed(), 600, 350);
-    
+    addObject(new Scorpion(), 600, 365);
+
 }
     }
 }

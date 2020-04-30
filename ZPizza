@@ -1,0 +1,22 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class ZPizza here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ZPizza extends Actor
+{
+    /**
+     * Act - do whatever the ZPizza wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        int y=getY();
+        int x=getX();
+        x-=3;
+        setLocation(x,y);
+    }    
+}

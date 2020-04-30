@@ -42,6 +42,11 @@ public class MyWorld extends World
     addObject(new Soda(), 600, 350);
     addObject(new Tumbleweed(), 600, 350);
     addObject(new Scorpion(), 600, 365);
+    addObject(new Gatorade(), 600, 200);
+    addObject(new ZPizza(), 600, 200);
+    addObject(new Labtop(), 600, 200);
+    addObject(new ElectricBike(), 600, 180);
+    addObject(new CliffBar(), 600, 200);
 
 }
         

@@ -41,7 +41,7 @@ public class MyWorld extends World
  
     addObject(new Bear(), 100, 300);
     addObject(new Jumper(), 245, 330);
-    addObject(new Healthbar(), 500, UI_top);
+    addObject(new HealthBar(), 500, UI_top);
     addObject(new Heart(), 455, UI_top);
     addObject(new Heart2(), 478, UI_top);
     addObject(new Heart3(), 501, UI_top);

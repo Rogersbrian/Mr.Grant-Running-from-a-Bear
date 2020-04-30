@@ -27,9 +27,8 @@ public class MyWorld extends World
     addObject(new Bush(), 599, height);
     addObject(new road(), 599, height);
     addObject(new RoadFront(), 599, height);
- 
-    addObject(new Bear(), 100, 300);
-    addObject(new Jumper(), 245, 330);
+ addObject(new Bear(), 100, 170);
+    addObject(new Jumper(), 245, 170);
     addObject(new Healthbar(), 500, UI_top);
     addObject(new Heart(), 455, UI_top);
     addObject(new Heart2(), 478, UI_top);
@@ -37,16 +36,16 @@ public class MyWorld extends World
     addObject(new Heart4(), 524, UI_top);
     addObject(new Heart5(), 547, UI_top);
     addObject(new Timer(), 200, 30);
-    addObject(new Cactus(), 600, 300);
+    addObject(new Cactus(), 600, 185);
     addObject(new Bird(), 600, 100);
-    addObject(new Soda(), 600, 350);
-    addObject(new Tumbleweed(), 600, 350);
-    addObject(new Scorpion(), 600, 365);
-    addObject(new Gatorade(), 600, 200);
-    addObject(new ZPizza(), 600, 200);
-    addObject(new Labtop(), 600, 200);
+    addObject(new Soda(), 600, 180);
+    addObject(new Tumbleweed(), 600, 190);
+    addObject(new Scorpion(), 600, 190);
+    addObject(new Gatorade(), 600, 180);
+    addObject(new ZPizza(), 600, 190);
+    addObject(new Labtop(), 600, 170);
     addObject(new ElectricBike(), 600, 180);
-    addObject(new CliffBar(), 600, 200);
+    addObject(new CliffBar(), 600, 170);
 
 }
         

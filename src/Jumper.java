@@ -12,7 +12,7 @@ public class Jumper extends Actor
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private final int GRAVITY=1;
+    private final int GRAVITY=3;
     private int velocity;
     private static boolean key = false;
     private int keyTime = 251;

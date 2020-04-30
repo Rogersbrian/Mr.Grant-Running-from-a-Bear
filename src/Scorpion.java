@@ -24,4 +24,4 @@ public class Scorpion extends Actor
         setLocation(x, getY()+(int)(Math.sin((double)(getX()+1)*frequency/95.5)*amplitude));
     }    
     }    
-}
+

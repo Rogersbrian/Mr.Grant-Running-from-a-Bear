@@ -14,10 +14,12 @@ public class MyWorld extends World
      * 
      */
     private static boolean game = false;
+    int height = 115;
+    int UI_top = 30;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 230, 1); 
     }
     
     public void started() {
@@ -29,20 +31,23 @@ public class MyWorld extends World
     }
 }
     if (game == true){
-    addObject(new Mountain(), 599, 250);
-    addObject(new RoadBack(), 599, 270);
-    addObject(new Bush(), 599, 250);
-    addObject(new road(), 599, 280);
-    addObject(new RoadFront(), 599, 280);
-    addObject(new Bear(), 100, 350);
-    addObject(new Jumper(), 250, 330);
-    addObject(new HealthBar(), 500, 50);
-    addObject(new Heart(), 455, 50);
-    addObject(new Heart2(), 478, 50);
-    addObject(new Heart3(), 501, 50);
-    addObject(new Heart4(), 524, 50);
-    addObject(new Heart5(), 547, 50);
-    addObject(new Timer(), 200, 50);
+    addObject(new Clouds(), 599, height);
+    addObject(new Sky(), 599, height);
+    addObject(new Mountain(), 599, height);
+    addObject(new RoadBack(), 599, height);
+    addObject(new Bush(), 599, height);
+    addObject(new road(), 599, height);
+    addObject(new RoadFront(), 599, height);
+ 
+    addObject(new Bear(), 100, 300);
+    addObject(new Jumper(), 245, 330);
+    addObject(new Healthbar(), 500, UI_top);
+    addObject(new Heart(), 455, UI_top);
+    addObject(new Heart2(), 478, UI_top);
+    addObject(new Heart3(), 501, UI_top);
+    addObject(new Heart4(), 524, UI_top);
+    addObject(new Heart5(), 547, UI_top);
+    addObject(new Timer(), 200, 30);
     addObject(new Cactus(), 600, 300);
     addObject(new Bird(), 600, 100);
     addObject(new Soda(), 600, 350);

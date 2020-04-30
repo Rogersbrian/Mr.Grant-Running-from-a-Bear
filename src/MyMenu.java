@@ -16,18 +16,19 @@ public class MyMenu extends World
     public MyMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 230, 1); 
     }
     
         
     public void started() {
-    addObject(new Mountain(), 599, 250);
-    addObject(new RoadBack(), 599, 270);
-    addObject(new Bush(), 599, 250);
-    addObject(new road(), 599, 280);
-    addObject(new RoadFront(), 599, 280);
-    addObject(new Menu(), 300, 300);
-    showText  ("Mr. Grant Runs Away From a Bear!", 300, 200);
+    addObject(new Sky(), 300, 115);
+    addObject(new Mountain(), 599, 115);
+    addObject(new RoadBack(), 599, 115);
+    addObject(new Bush(), 599, 115);
+    addObject(new road(), 599, 115);
+    addObject(new RoadFront(), 599, 115);
+    addObject(new Menu(), 300, 115);
+    showText  ("Mr. Grant Runs Away From a Bear!", 300, 70);
     }
     
     

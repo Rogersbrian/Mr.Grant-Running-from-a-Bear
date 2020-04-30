@@ -13,35 +13,22 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private static boolean game = false;
     int height = 115;
     int UI_top = 30;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 230, 1); 
-    }
-    
-    public void started() {
-        while (game == false)
-        {
-        if (Greenfoot.isKeyDown("space"))
-        {
-            game = true;
-        }
-    }
-    if (game == true){
-    addObject(new Clouds(), 599, height);
+        addObject(new Clouds(), 599, height);
     addObject(new Sky(), 599, height);
     addObject(new Mountain(), 599, height);
     addObject(new RoadBack(), 599, height);
     addObject(new Bush(), 599, height);
     addObject(new road(), 599, height);
     addObject(new RoadFront(), 599, height);
- 
     addObject(new Bear(), 100, 200);
     addObject(new Jumper(), 245, 200);
-    addObject(new HealthBar(), 500, UI_top);
+    addObject(new Healthbar(), 500, UI_top);
     addObject(new Heart(), 455, UI_top);
     addObject(new Heart2(), 478, UI_top);
     addObject(new Heart3(), 501, UI_top);
@@ -54,5 +41,5 @@ public class MyWorld extends World
     addObject(new Tumbleweed(), 600, 200);
     addObject(new Scorpion(), 600, 200);
     }
-}
+   
 }

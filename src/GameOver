@@ -19,10 +19,14 @@ public class GameOver extends World
         super(600, 230, 1);        
         removeObjects(getObjects(Actor.class)); // remove all actors from world
         GreenfootImage imageFinal = getBackground(); // get reference to background image
-        imageFinal.setColor(Color.BLACK); // set drawing color to black for 'imageFinal' image
+        imageFinal.setColor(Color.WHITE); // set drawing color to black for 'imageFinal' image
         imageFinal.fill(); // fills 'imageFinal' image with the currently set drawing color
-        GreenfootImage textFinal = new GreenfootImage("GAME\nOVER", 80, Color.WHITE, Color.BLACK); // create "GAME OVER" text image
+        GreenfootImage textFinal = new GreenfootImage("GAME\nOVER", 80, Color.BLACK, Color.WHITE); // create "GAME OVER" text image
         imageFinal.drawImage(textFinal, (imageFinal.getWidth()-textFinal.getWidth())/2, (imageFinal.getHeight()-textFinal.getHeight())/2); // draw text centered onto 'imageFinal' image
+        addObject(new Menu(), 500, 180);
+        if (Greenfoot.mouseClicked(Menu.class))
+    {
         Greenfoot.stop();
+    }
     }
 }

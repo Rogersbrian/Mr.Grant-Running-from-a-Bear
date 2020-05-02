@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    int height = 115;
+     int height = 115;
     int UI_top = 30;
     public MyWorld()
     {    
@@ -27,7 +27,8 @@ public class MyWorld extends World
     addObject(new Bush(), 599, height);
     addObject(new road(), 599, height);
     addObject(new RoadFront(), 599, height);
- addObject(new Bear(), 100, 170);
+ 
+    addObject(new Bear(), 100, 170);
     addObject(new Jumper(), 245, 170);
     addObject(new Healthbar(), 500, UI_top);
     addObject(new Heart(), 455, UI_top);
@@ -47,9 +48,6 @@ public class MyWorld extends World
     addObject(new ElectricBike(), 600, 180);
     addObject(new CliffBar(), 600, 170);
 
-}
-        
-    }
-    
-    
 
+}
+}

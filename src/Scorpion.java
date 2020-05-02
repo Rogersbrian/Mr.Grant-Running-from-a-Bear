@@ -12,16 +12,20 @@ public class Scorpion extends Actor
      * Act - do whatever the Scorpion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int count=0;
     public void act() 
     {
-       int y=getY();
+        count++;
+        if(count>100)
+        {
+     int y=getY();
         int x=getX();
-        x-=.05;
+        x-=4;
         setLocation(x,y);
         double amplitude = 1.3;
-        double frequency = 3.0;
+        double frequency = 10.0;
         x--;
         setLocation(x, getY()+(int)(Math.sin((double)(getX()+1)*frequency/95.5)*amplitude));
     }    
-    }    
-
+}
+}

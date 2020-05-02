@@ -12,11 +12,17 @@ public class Cactus extends Actor
      * Act - do whatever the Cactus wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+        private int count=0;
+
     public void act() 
     {
+        count++;
+        if(count>850)
+        {
         int y=getY();
         int x=getX();
-        x--;
+        x-=4;
         setLocation(x,y);
+    }
     }    
 }

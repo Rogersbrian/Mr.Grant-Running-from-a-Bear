@@ -12,7 +12,7 @@ public class Jumper extends Actor
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private final int GRAVITY=1;
+    private final double GRAVITY=1;
     private int velocity;
     private static boolean key = false;
     private int keyTime = 251;
@@ -36,7 +36,7 @@ public class Jumper extends Actor
         velocity+=GRAVITY;
     }
     public void jump(){
-        velocity=-20;
+        velocity=-25;
     }
     public void move()
     {
@@ -60,7 +60,7 @@ public class Jumper extends Actor
 }
         if (Greenfoot.isKeyDown("space"))//jump
         {
-        y--;
+        y-=2;
     }
         setLocation(x,y);
     }

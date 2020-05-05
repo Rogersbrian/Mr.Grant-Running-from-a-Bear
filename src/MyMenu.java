@@ -28,8 +28,8 @@ public class MyMenu extends World
     addObject(new road(), 599, 115);
     addObject(new RoadFront(), 599, 115);
     addObject(new Menu(), 200, 115);
-    showText  ("Mr. Grant Runs Away From a Bear!", 300, 70);
-        addObject(new Instruction(), 400, 115);
+    addObject(new Title(), 300, 70);        
+    addObject(new Instruction(), 400, 115);
  
 
     }

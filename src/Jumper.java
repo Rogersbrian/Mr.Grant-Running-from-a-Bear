@@ -16,6 +16,7 @@ public class Jumper extends Actor
     private int velocity;
     private static boolean key = false;
     private int keyTime = 251;
+    private int count=0;
     public Jumper(){
         velocity=0;
     }
@@ -23,10 +24,13 @@ public class Jumper extends Actor
     {
         if (isTouching(Scorpion.class)||isTouching(Bear.class)||isTouching(Bird.class)||isTouching(Cactus.class)||isTouching(Cactus.class)||isTouching(Soda.class)||isTouching(Tumbleweed.class))
         Greenfoot.setWorld(new GameOver());
+        if (isTouching(CliffBar.class)||isTouching(ElectricBike.class)||isTouching(Gatorade.class)||isTouching(ZPizza.class))
+            Points.addToTotal();
         fall();
         if(Greenfoot.isKeyDown("space")&&getY()>getWorld().getHeight()-70)
         jump();
         move();
+        time(); //fall back one x value every second
     }    
     public void fall(){
         setLocation(getX(), getY()+velocity);
@@ -37,6 +41,18 @@ public class Jumper extends Actor
     }
     public void jump(){
         velocity=-25;
+    }
+    public void time()
+    {
+        int x=getX();
+        int y=getY();
+        count++;
+        if(count/10==1)
+        {
+            x--;
+            count=0;
+        }
+        setLocation(x,y);
     }
     public void move()
     {

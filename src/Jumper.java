@@ -1,65 +1,54 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Character here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Jumper extends Actor
 {
-    /**
-     * Act - do whatever the Character wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private Pacer pacer;
     private final double GRAVITY=1;
     private int velocity;
     private static boolean key = false;
     private int keyTime = 251;
-    private int count=0;
+    private int i = 0;
     public Jumper(){
         velocity=0;
+        pacer = MyWorld.getPacer();
     }
     public void act() 
     {
         if (isTouching(Scorpion.class)||isTouching(Bear.class)||isTouching(Bird.class)||isTouching(Cactus.class)||isTouching(Cactus.class)||isTouching(Soda.class)||isTouching(Tumbleweed.class))
         Greenfoot.setWorld(new GameOver());
-        if (isTouching(CliffBar.class)||isTouching(ElectricBike.class)||isTouching(Gatorade.class)||isTouching(ZPizza.class))
-            Points.addToTotal();
         fall();
         if(Greenfoot.isKeyDown("space")&&getY()>getWorld().getHeight()-70)
         jump();
         move();
-        time(); //fall back one x value every second
     }    
     public void fall(){
         setLocation(getX(), getY()+velocity);
         if(getY()>getWorld().getHeight()-70)
         velocity=0;
-        else
-        velocity+=GRAVITY;
+        else if(i == 2) {
+       velocity+=GRAVITY;
+         
     }
+    }
+    
     public void jump(){
-        velocity=-25;
+        velocity=-8;
+        pacer.increaseSpeed(0.8);
     }
-    public void time()
-    {
-        int x=getX();
-        int y=getY();
-        count++;
-        if(count/10==1)
-        {
-            x--;
-            count=0;
-        }
-        setLocation(x,y);
-    }
+    
     public void move()
     {
         int y=getY();
         int x=getX();
-   
-        if(Greenfoot.isKeyDown("f")){//move
+        int paceNum = (int)Math.round((pacer.getSpeed()-1)*3);
+        
+         if(i == 2) {
+        x+= paceNum;
+        i=0;
+    }
+    else i++;
+        /*if(Greenfoot.isKeyDown("f")){//move
         key = true;
         keyTime = 0;
     }
@@ -78,6 +67,8 @@ public class Jumper extends Actor
         {
         y-=2;
     }
+    */
         setLocation(x,y);
+        
     }
 }

@@ -1,22 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Right here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Right extends Actor
 {
-    /**
-     * Act - do whatever the Right wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private Pacer pacer;
+    public Right() {
+    pacer = MyWorld.getPacer();
+    }
     public void act() 
     {
-        if(Greenfoot.isKeyDown("j")) {
+        if(Greenfoot.isKeyDown("j") && !Greenfoot.isKeyDown("f")) {
             this.setImage("RightPress.png");
-            //if(!Left.leftTurn) Left.resetTimer();
+            if(pacer.getFootVal() == 2) pacer.beginRun(); 
+            if(pacer.getFootVal() != 0) {
+                pacer.setFootVal(0);
+                pacer.mark();
+            }
+            
         }
         else this.setImage("Right.png");
     }    

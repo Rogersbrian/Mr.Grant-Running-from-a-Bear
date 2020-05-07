@@ -1,36 +1,35 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Left here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Left extends Actor
 {
-    public static int interval = 0;
-    public static double speed = 0;
-    public static boolean firstStep = true;
-    public static boolean leftTurn;
+    private Pacer pacer;
+    
+    public Left() {
+    pacer = MyWorld.getPacer();
+    }
     public void act() 
     {
-        if(Greenfoot.isKeyDown("f")) {
-            if(firstStep) {
-            speed = interval;
-            }
-            else if (leftTurn) resetTimer();
-            
+        if(Greenfoot.isKeyDown("f") && !Greenfoot.isKeyDown("j")) {
             this.setImage("LeftPress.png");
-            leftTurn = false;
+          
+            if(pacer.getFootVal() == 2) pacer.beginRun(); 
+            if(pacer.getFootVal() != 1) {
+                pacer.setFootVal(1);
+                pacer.mark();
+            }
+ 
         }
         else this.setImage("Left.png");
-        if(firstStep == true || leftTurn == true) {
-        interval ++;
+              if(pacer.millisElapsed() > 350) {
+            if(pacer.getFootVal() == 2) pacer.beginRun();
+            else {
+                
+                pacer.mark();
+                pacer.reduceSpeed();
+            }
+        }
+    
     }
     }  
-    public static void resetTimer() {
-       speed = (speed+interval)/2;
-       interval = 0;
-       System.out.println(speed);
-    }
-}
+

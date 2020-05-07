@@ -21,10 +21,6 @@ public class Timer extends Actor
         Greenfoot.setSpeed(50);
         this.output = output;
     }
-    /**
-     * Act - do whatever the Timer wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         Greenfoot.setSpeed(50);

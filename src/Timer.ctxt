@@ -7,7 +7,6 @@ comment2.params=output
 comment2.target=Timer(java.lang.String)
 comment3.params=
 comment3.target=void\ act()
-comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Timer\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment4.params=
 comment4.target=java.lang.String\ timeElapsed()
 numComments=5

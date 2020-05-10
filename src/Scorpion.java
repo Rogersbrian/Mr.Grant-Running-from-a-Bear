@@ -13,19 +13,28 @@ public class Scorpion extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int count=0;
+    private int rate=200;
+
     public void act() 
     {
         count++;
-        if(count>100)
+        if(count>rate)
         {
-     int y=getY();
+        move();
+        }    
+       if(getX()==0)
+       {
+       count=0;
+       setLocation(600, 190);
+       if(rate>50)
+       rate--;
+       }
+    }
+    public void move()
+    {
+        int y=getY();
         int x=getX();
-        x-=4;
+        x-=6;
         setLocation(x,y);
-        double amplitude = 1.3;
-        double frequency = 10.0;
-        x--;
-        setLocation(x, getY()+(int)(Math.sin((double)(getX()+1)*frequency/95.5)*amplitude));
-    }    
-}
+    }
 }

@@ -17,6 +17,10 @@ public class Jumper extends Actor
     {
         if (isTouching(Scorpion.class)||isTouching(Bear.class)||isTouching(Bird.class)||isTouching(Cactus.class)||isTouching(Cactus.class)||isTouching(Soda.class)||isTouching(Tumbleweed.class))
         Greenfoot.setWorld(new GameOver());
+        if (isTouching(CliffBar.class)||isTouching(ElectricBike.class)||isTouching(Gatorade.class)||isTouching(ZPizza.class)||isTouching(Tumbleweed.class))
+        {
+        Points.addToTotal();
+        }
         fall();
         if(Greenfoot.isKeyDown("space")&&getY()>getWorld().getHeight()-70)
         jump();

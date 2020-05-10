@@ -13,15 +13,28 @@ public class Soda extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int count=0;
+    private int rate=800;
     public void act() 
     {
         count++;
-        if(count>800)
+        if(count>rate)
         {
+        move();
+        } 
+        if(getX()==0)
+       {
+       count=0;
+       setLocation(600, 190);
+       if(rate>90)
+       rate--;
+       }
+    }     
+    public void move()
+    {
         int y=getY();
         int x=getX();
        x-=2;
         setLocation(x,y);
-    }     
+    }
 }
-}
+

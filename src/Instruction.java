@@ -16,7 +16,7 @@ public class Instruction extends Actor
     {
         if (Greenfoot.mouseClicked(this))
         {
-       setImage(new GreenfootImage("Instructions.PNG"));
+       setImage(new GreenfootImage("InstructionsFinal.png"));
          }    
     }
 }

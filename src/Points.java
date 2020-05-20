@@ -14,9 +14,15 @@ public class Points extends Actor
      */
     private static int total=0;
     private int count=0;
+    private int fStart = 0;
     public void act() 
     {
+        if (fStart == 0){
+            total = 0;
+            fStart = 1;
+        }
         count++;
+        update();
         setImage(new GreenfootImage("Points:" + "\n"+pointTotal(), 25, Color.WHITE, new Color(0, 0, 0, 0)));
     }
     public String pointTotal(){
@@ -36,4 +42,17 @@ public class Points extends Actor
     public static String showTotal(){
         return Integer.toString(total);
     }
+    public int getTotal(){
+        return total;
+    }
+        public void update(){
+        if (UserInfo.isStorageAvailable()) {
+         UserInfo myInfo = UserInfo.getMyInfo();
+         if (total > myInfo.getScore()) {
+             myInfo.setScore(total);
+             myInfo.store();  // write back to server
+         }
+     }
+    }
 }
+

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Pacer
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ pacer\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Pacer()
+comment2.params=
+comment2.target=double\ getSpeed()
+comment3.params=
+comment3.target=int\ getFootVal()
+comment4.params=val
+comment4.target=void\ setFootVal(int)
+comment5.params=val
+comment5.target=void\ increaseSpeed(double)
+comment6.params=
+comment6.target=void\ reduceSpeed()
+comment7.params=
+comment7.target=void\ mark()
+comment8.params=
+comment8.target=void\ beginRun()
+numComments=9
